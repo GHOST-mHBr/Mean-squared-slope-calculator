@@ -91,7 +91,8 @@ int main()
                 cin >> value;
                 data = stod(value);
                 y_values.push_back(data);
-                if(y_values.size() >= x_values.size()){
+                if (y_values.size() >= x_values.size())
+                {
                     invalid_argument i("");
                     throw i;
                 }
@@ -99,8 +100,9 @@ int main()
         }
         catch (invalid_argument e)
         {
-            if(y_values.size() != x_values.size()){
-                cout<<"The number of y and x values are different!\n\n";
+            if (y_values.size() != x_values.size())
+            {
+                cout << "The number of y and x values are different!\n\n";
                 exit(0);
             }
         }
@@ -140,12 +142,13 @@ int main()
     std::cout << "error of m: " << error_of_m << endl;
     std::cout << "error of b: " << error_of_b << endl;
 
-    for(double x : x_values){
-        predicted_y_values.push_back(x*m+b);
+    for (double x : x_values)
+    {
+        predicted_y_values.push_back(x * m + b);
     }
     average_of_predicted_y_values = findAverage(predicted_y_values);
 
-    cout<<"zaribe regression: "<<findSumOfErrorSquares(predicted_y_values , average_of_y_values)/findSumOfErrorSquares(y_values , average_of_predicted_y_values);
+    cout << "zaribe regression: " << pow(findSumOfErrorSquares(predicted_y_values, average_of_y_values) / findSumOfErrorSquares(y_values, average_of_predicted_y_values) , 0.5);
 
     return 0;
 }
