@@ -3,4 +3,4 @@
 C++ 11 or above compiler (g++/gcc is recommanded)
 
 ## How to use:
-after running code just enter your X values and after the last one enter "end"(any non numeral text). then enter Y values.
+after running the code enter your X values(after each value press Enter) and after the last one enter "end"(any non numeral text). then enter Y values.
